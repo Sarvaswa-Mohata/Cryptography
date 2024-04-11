@@ -1,32 +1,41 @@
 import java.util.ArrayList;
 import com.google.gson.GsonBuilder;
+import com.google.gson.Gson;
 
 public class blockchain {
 
     public static ArrayList<Block> blockchain = new ArrayList<Block>();
     public static int difficulty = 5;
 
-	public static void main(String[] args) {	
-		//add our blocks to the blockchain ArrayList:
-		
-		blockchain.add(new Block("Hi im the first block", "0"));
-		System.out.println("Trying to Mine block 1... ");
-		blockchain.get(0).mineBlock(difficulty);
-		
-		blockchain.add(new Block("Yo im the second block",blockchain.get(blockchain.size()-1).hash));
-		System.out.println("Trying to Min e block 2... ");
-		blockchain.get(1).mineBlock(difficulty);
-		
-		blockchain.add(new Block("Hey im the third block",blockchain.get(blockchain.size()-1).hash));
-		System.out.println("Trying to Mine block 3... ");
-		blockchain.get(2).mineBlock(difficulty);	
-		
-		System.out.println("\nBlockchain is Valid: " + isChainValid());
-		
-		String blockchainJson = new GsonBuilder().setPrettyPrinting().create().toJson(blockchain);
-		System.out.println("\nThe block chain: ");
-		System.out.println(blockchainJson);
-	}
+	public void addBlock(Transaction transaction) {
+        String transactionData = serializeTransaction(transaction); // Convert transaction to string data
+        String previousHash = getLastBlockHash(); // Get hash of the last block in the blockchain
+
+        // Create a new block with the transaction data and previous hash
+        Block newBlock = new Block(transactionData, previousHash);
+
+        // Add the new block to the blockchain
+        blockchain.add(newBlock);
+    }
+
+    // Helper method to serialize transaction data (convert transaction object to string)
+    public String serializeTransaction(Transaction transaction) {
+        // Create a Gson instance
+        Gson gson = new Gson();
+
+        // Convert the Transaction object to a JSON string
+        String jsonTransaction = gson.toJson(transaction);
+
+        return jsonTransaction;
+    }
+
+    // Helper method to get the hash of the last block in the blockchain
+    public String getLastBlockHash() {
+        if (blockchain.isEmpty()) {
+            return "0"; // Return default hash for the genesis block (e.g., "0")
+        }
+        return blockchain.get(blockchain.size() - 1).calculateHash();
+    }
 	
 	public static Boolean isChainValid() {
 		Block currentBlock; 
