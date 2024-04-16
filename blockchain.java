@@ -1,6 +1,5 @@
 import java.util.ArrayList;
-import com.google.gson.GsonBuilder;
-import com.google.gson.Gson;
+import java.io.*;
 
 public class blockchain {
 
@@ -19,14 +18,18 @@ public class blockchain {
     }
 
     // Helper method to serialize transaction data (convert transaction object to string)
-    public String serializeTransaction(Transaction transaction) {
-        // Create a Gson instance
-        Gson gson = new Gson();
-
-        // Convert the Transaction object to a JSON string
-        String jsonTransaction = gson.toJson(transaction);
-
-        return jsonTransaction;
+	public String serializeTransaction(Transaction transaction) {
+        String serializedTransaction = null;
+        try {
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(byteArrayOutputStream);
+            objectOutputStream.writeObject(transaction);
+            objectOutputStream.close();
+            serializedTransaction = byteArrayOutputStream.toString();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return serializedTransaction;
     }
 
     // Helper method to get the hash of the last block in the blockchain
