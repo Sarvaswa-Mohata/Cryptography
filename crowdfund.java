@@ -159,8 +159,19 @@ public class crowdfund {
                 }
             }
             else if(choice==3){
+                System.out.println("Enter the recipient's name whose transaction you want to view:");
+                String name = scanner.nextLine();
+                // Call the viewUser method with the recipient's name
+                List<Transaction> transactions = new ArrayList<>(); // Assuming you have a list of transactions
+                ViewTransactions viewTransactions = new ViewTransactions(transactions);
+                viewTransactions.viewUser(name);                
+            }
+            else if(choice==4){
                 scanner.close();
                 return;
+            }
+            else{
+                System.out.println("You entered an invalid choice! Please choose again...");
             }
         }
     }

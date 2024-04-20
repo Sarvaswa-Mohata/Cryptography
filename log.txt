@@ -1,3 +1,4 @@
 Raise Money
 Donate Money
+View Transactions
 Exit

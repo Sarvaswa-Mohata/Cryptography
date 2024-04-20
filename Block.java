@@ -4,7 +4,7 @@ public class Block {
 	
 	public String hash;
 	public String previousHash; 
-	private String data; //our data will be a simple message.
+	private String data; //our data will be a serialized transaction data.
 	private long timeStamp; //as number of milliseconds since 1/1/1970.
 	private int nonce;
 	
@@ -15,6 +15,14 @@ public class Block {
 		this.timeStamp = new Date().getTime();
 		
 		this.hash = calculateHash(); //Making sure we do this after we set the other values.
+	}
+
+	public String getData(){
+		return data;
+	}
+
+	public String getHash(){
+		return hash;
 	}
 	
 	//Calculate new hash based on blocks contents
