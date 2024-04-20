@@ -79,6 +79,8 @@
 </li>
 <li>
 <p>If you select  <strong>Raise Money</strong>, follow the prompts to provide the necessary details for your fundraising campaign. This may include the campaign name, purpose, and target amount.</p>
+
+  ![image](https://github.com/Sarvaswa-Mohata/Cryptography/assets/99800509/7764ac7e-1608-4628-9b03-dee26a4659dc)
 </li>
 <li>
 <p>If you select  <strong>Donate Money</strong>, you will see a list of available campaigns with their respective details, such as the recipient’s name, campaign name, and current amount raised. Choose the appropriate campaign by selecting the corresponding number.</p>
@@ -86,11 +88,15 @@
 <li>
 <p>Enter the amount of money you wish to donate to the selected campaign when prompted.</p>
 </li>
+
+![image](https://github.com/Sarvaswa-Mohata/Cryptography/assets/99800509/50d73e52-74db-4900-8549-d33076dda53e)
 <li>
 <p>The application will generate a challenge and calculate the HMAC response to verify the donation transaction. If the verification is successful, the transaction will be added to the blockchain and the amount will be updated accordingly.</p>
 </li>
 <li>
 <p>If you select  <strong>View Transactions</strong>, enter the name of the recipient whose transaction history you want to view when prompted. The application will display the block hash and the corresponding amount for each transaction made to that recipient.</p>
+
+  ![image](https://github.com/Sarvaswa-Mohata/Cryptography/assets/99800509/df1385fb-4503-42dc-8002-5e04924b7dab)
 </li>
 <li>
 <p>You can repeat the above steps as needed to create new campaigns, make donations, or view transaction history.</p>
@@ -98,6 +104,8 @@
 <li>
 <p>To exit the application, select  <strong>Exit</strong>  from the main menu.</p>
 </li>
+
+
 </ul>
 <h2 id="contributing">Contributing</h2>
 <p>Contributions are welcome! If you would like to contribute to this project, please follow these guidelines:</p>
