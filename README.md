@@ -1,7 +1,3 @@
----
-
-
----
 
 <h1 id="crowdfunding-application">Crowdfunding Application</h1>
 <p><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a></p>
@@ -121,3 +117,12 @@
 <p>For any questions or inquiries, please contact us via <a href="gitcode2003@gmail.com">email</a>.<br>
 Thank you for using our Crowdfunding Application!</p>
 
+</ul>
+<h2 id="contributing">List Of Members</h2>
+<ul>
+<li>Sarvaswa Mohata - 2020B1AA2358H</li>
+<li>Ashish Yakkala - 2020B4AA0489H</li>
+<li>Akhilesh Valluri Kaushik - 2020B5AA0960H</li>
+<li>Deshmukh Dhruv Sanjay - 2020B3A72160H</li>
+<li>Anirudh K - 2020B3A72160H</li>
+</ul>
