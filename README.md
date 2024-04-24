@@ -124,5 +124,5 @@ Thank you for using our Crowdfunding Application!</p>
 <li>Ashish Yakkala - 2020B4AA0489H</li>
 <li>Akhilesh Valluri Kaushik - 2020B5AA0960H</li>
 <li>Deshmukh Dhruv Sanjay - 2020B3A72160H</li>
-<li>Anirudh K - 2020B3A72160H</li>
+<li>Anirudh K - 2020B3A71927H</li>
 </ul>
